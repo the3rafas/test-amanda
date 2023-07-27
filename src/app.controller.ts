@@ -6,6 +6,10 @@ import { Request } from 'express';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  @Get('/')
+  asyHi(): string {
+    return 'hi amanda';
+  }
   @Get('/test')
   testGet(@Req() req: Request): string {
     console.log('Get test ****************************************');
